@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/autoload.php';
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/src/Modules/Products/products.php';
 require_once __DIR__ . '/src/Modules/Users/User.php';

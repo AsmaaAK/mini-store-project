@@ -3,7 +3,7 @@ namespace MiniStore\Traits;
 
 trait LoggingTrait
 {
-    protected function logAction(string $message): void
+    protected function logAction($message)
     {
         if (config('logging.enabled')) {
             $logFile = config('logging.file');

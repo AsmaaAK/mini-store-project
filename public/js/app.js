@@ -1,6 +1,5 @@
-// نموذج بسيط لعرض المنتجات وإدارة السلة
+
 document.addEventListener('DOMContentLoaded', function() {
-    // بيانات المنتجات (في الواقع ستأتي من PHP)
     const products = [
         { id: 'P001', name: 'Laptop', price: 999.99, stock: 10 },
         { id: 'P002', name: 'Smartphone', price: 499.99, stock: 20 },
@@ -57,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // هنا ستقوم بإرسال البيانات إلى PHP لمعالجة الطلب
         alert('Order submitted! Check the PHP console for details.');
     });
 });

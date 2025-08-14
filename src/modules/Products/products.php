@@ -1,5 +1,4 @@
 <?php
-// src/Modules/Products/Product.php
 namespace MiniStore\Modules\Products;
 
 class Product
