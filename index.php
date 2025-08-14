@@ -4,13 +4,13 @@ require_once __DIR__ . '/src/Modules/Products/products.php';
 require_once __DIR__ . '/src/Modules/Users/User.php';
 require_once __DIR__ . '/src/Modules/Users/Customer.php';
 require_once __DIR__ . '/src/Modules/Users/Admin.php';
-// require_once __DIR__ . '/src/Modules/Orders/Order.php';
+require_once __DIR__ . '/src/Modules/Orders/Order.php';
 require_once __DIR__ . '/src/Modules/Payments/PaymentGateway.php';
 require_once __DIR__ . '/src/Modules/Payments/PayPalPayment.php';
 require_once __DIR__ . '/src/Modules/Payments/CreditCardPayment.php';
-// require_once __DIR__ . '/src/Traits/LoggingTrait.php';
-// require_once __DIR__ . '/src/Traits/DiscountTrait.php';
-// require_once __DIR__ . '/src/Traits/OrderStatusTrait.php';
+require_once __DIR__ . '/src/Traits/LoggingTrait.php';
+require_once __DIR__ . '/src/Traits/DiscountTrait.php';
+require_once __DIR__ . '/src/Traits/OrderStatusTrait.php';
 
 // إنشاء منتجات
 $product1 = new \MiniStore\Modules\Products\Product('P001', 'Laptop', 999.99, 10, 'High performance laptop');

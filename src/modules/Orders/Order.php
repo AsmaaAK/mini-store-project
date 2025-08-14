@@ -2,7 +2,6 @@
 namespace MiniStore\Modules\Orders;
 use MiniStore\Modules\Users\Customer;
 use MiniStore\Modules\Products\Product;
-
 class Order
 {
     use \MiniStore\Traits\LoggingTrait;
