@@ -44,12 +44,10 @@ class Order
     {
         $total = $this->totalAmount;
         
-        // Apply discount if order is large
         if ($total > 100) {
             $total = $this->applyDiscount($total);
         }
-        
-        // Add tax
+
         $total *= (1 + TAX_RATE);
         
         return round($total, 2);
