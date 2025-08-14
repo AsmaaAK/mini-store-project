@@ -1,5 +1,4 @@
 <?php
-// src/Modules/Users/User.php
 namespace MiniStore\Modules\Users;
 
 abstract class User
