@@ -1,7 +1,15 @@
 <?php
 spl_autoload_register(function ($class) {
-    // استبدال "\" بالـ "/" لتحديد مسار الملف
-    $file = __DIR__ . '/src/' . str_replace('\\', '/', $class) . '.php';
+    $prefix = 'MiniStore\\';
+    $base_dir = __DIR__ . '/src/';
+    
+    $len = strlen($prefix);
+    if (strncmp($prefix, $class, $len) !== 0) {
+        return;
+    }
+    
+    $relative_class = substr($class, $len);
+    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
     
     if (file_exists($file)) {
         require $file;

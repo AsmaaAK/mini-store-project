@@ -1,12 +1,15 @@
 <?php
 namespace MiniStore\Modules\Orders;
+
 use MiniStore\Modules\Users\Customer;
-use MiniStore\Modules\Products\products;
+use MiniStore\Modules\Products\Product;
+use MiniStore\Traits\LoggingTrait;
+use MiniStore\Traits\DiscountTrait;
+use MiniStore\Traits\OrderStatusTrait;
+
 class Order
 {
-    use \MiniStore\Traits\LoggingTrait;
-    use \MiniStore\Traits\DiscountTrait;
-    use \MiniStore\Traits\OrderStatusTrait;
+    use LoggingTrait, DiscountTrait, OrderStatusTrait;
 
     private string $orderId;
     private Customer $customer;
@@ -44,10 +47,12 @@ class Order
     {
         $total = $this->totalAmount;
         
+        // Apply discount if order is large
         if ($total > 100) {
             $total = $this->applyDiscount($total);
         }
-
+        
+        // Add tax
         $total *= (1 + TAX_RATE);
         
         return round($total, 2);

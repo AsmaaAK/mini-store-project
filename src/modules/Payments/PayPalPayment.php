@@ -1,9 +1,10 @@
 <?php
 namespace MiniStore\Modules\Payments;
+use \MiniStore\Traits\LoggingTrait;
 
 class PayPalPayment implements PaymentGateway
 {
-    use \MiniStore\Traits\LoggingTrait;
+    use LoggingTrait;
 
     private string $email;
     private string $transactionId;

@@ -1,9 +1,9 @@
 <?php
 namespace MiniStore\Modules\Payments;
-
+use \MiniStore\Traits\LoggingTrait;
 class CreditCardPayment implements PaymentGateway
 {
-    use \MiniStore\Traits\LoggingTrait;
+    use LoggingTrait;
 
     private string $cardNumber;
     private string $cardHolder;
@@ -34,7 +34,7 @@ class CreditCardPayment implements PaymentGateway
         return $this->paymentStatus;
     }
 
-    public function getPaymentDetails()
+    public function getPaymentDetails():array
     {
         return [
             'method' => 'Credit Card',
